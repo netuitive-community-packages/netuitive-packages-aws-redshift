@@ -1,0 +1,39 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "ACE",
+    "id" : null,
+    "packageId" : null,
+    "name" : "Redshift Node",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "Redshift Node",
+      "elementTags" : null
+    },
+    "metrics" : [ {
+      "match" : "aws.redshift.cpuutilization",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.redshift.network.*",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.redshift.read.*",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.redshift.write.*",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    } ]
+  }
+}

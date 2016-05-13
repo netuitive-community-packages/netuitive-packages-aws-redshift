@@ -1,0 +1,51 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "ACE",
+    "id" : null,
+    "packageId" : null,
+    "name" : "Redshift Cluster",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "Redshift Cluster",
+      "elementTags" : null
+    },
+    "metrics" : [ {
+      "match" : "aws.redshift.cpuutilization",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.redshift.healthstatus",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "aws.redshift.maintenancemode",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "aws.redshift.network.*",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.redshift.read.*",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.redshift.write.*",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    } ]
+  }
+}
