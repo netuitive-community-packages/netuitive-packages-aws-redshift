@@ -251,7 +251,7 @@
         "useElementNameContains" : "true",
         "useAllElementScopeTags" : "true",
         "element_id" : null,
-        "elementScopeTypes" : "[\"RedshiftCluster\"]",
+        "elementScopeTypes" : "[\"RedshiftCluster\",\"Redshift Cluster\"]",
         "metricLimit" : "10",
         "useAllMetricScopeTags" : "true",
         "metricUnit" : null,
@@ -270,9 +270,9 @@
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-05-12T17:19:14Z",
-      "updated" : "2016-05-12T17:19:14Z"
+      "updated" : "2016-05-16T19:31:17Z"
     } ],
-    "type" : "Redshift Cluster",
+    "type" : "REDSHIFT CLUSTER",
     "private" : false
   }
 }

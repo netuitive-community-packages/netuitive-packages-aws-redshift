@@ -17,6 +17,39 @@
     "created" : "2016-05-12T16:57:54Z",
     "updated" : "2016-05-12T17:34:45Z",
     "widgets" : [ {
+      "id" : "99768911-883d-4774-8937-34c7b0095ff3",
+      "name" : "Events",
+      "description" : null,
+      "widgetType" : "event-ticker",
+      "properties" : {
+        "visualization" : null,
+        "showElementTotal" : "true",
+        "selectedAttributes" : "[]",
+        "elementScopeTags" : "[]",
+        "useElementNameContains" : "true",
+        "useAllElementScopeTags" : "true",
+        "element_id" : null,
+        "elementScopeTypes" : "[\"RedshiftCluster\",\"Redshift Node\"]",
+        "metricLimit" : "10",
+        "useAllMetricScopeTags" : "true",
+        "metricUnit" : null,
+        "metricAggs" : "[]",
+        "elementScopeIds" : "[]",
+        "elementScopeAttributes" : "[]",
+        "groupName" : null,
+        "elementNameContains" : null,
+        "showHighest" : "true",
+        "metric_fqn" : null,
+        "metricScopeTags" : "[]",
+        "width" : "medium",
+        "metrics" : "[]",
+        "selectedTab" : "table"
+      },
+      "dashboardId" : null,
+      "userId" : null,
+      "created" : "2016-05-12T17:13:22Z",
+      "updated" : "2016-05-16T19:32:17Z"
+    }, {
       "id" : "407f43cf-afd1-4431-bef9-497676750de4",
       "name" : "Read and Write IOPS",
       "description" : null,
@@ -44,39 +77,6 @@
       "userId" : null,
       "created" : "2016-05-12T17:32:27Z",
       "updated" : "2016-05-12T17:32:27Z"
-    }, {
-      "id" : "99768911-883d-4774-8937-34c7b0095ff3",
-      "name" : "Events",
-      "description" : null,
-      "widgetType" : "event-ticker",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"RedshiftCluster\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      },
-      "dashboardId" : null,
-      "userId" : null,
-      "created" : "2016-05-12T17:13:22Z",
-      "updated" : "2016-05-12T17:13:33Z"
     }, {
       "id" : "0417cbf5-3422-4476-a546-ee757c39dcf2",
       "name" : "Read and Write Latency",
@@ -296,7 +296,7 @@
       "created" : "2016-05-12T17:24:33Z",
       "updated" : "2016-05-12T17:24:33Z"
     } ],
-    "type" : "Redshift Node",
+    "type" : "REDSHIFT NODE",
     "private" : false
   }
 }
