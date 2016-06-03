@@ -1,8 +1,12 @@
-#netuitive.packages.aws.redshift 1.0.1
+#netuitive.packages.aws.redshift 1.0.2
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 1.0.2
+
+* Fixed minor bug on the summary dashboard.
 
 ###Version 1.0.1
 
