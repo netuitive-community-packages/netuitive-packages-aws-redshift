@@ -9,8 +9,7 @@
       "timeRangeDuration" : "3600",
       "density" : "normal",
       "refreshIntervalSeconds" : "300",
-      "wrap" : "true",
-      "favorite" : "true"
+      "wrap" : "true"
     },
     "tenantId" : null,
     "userId" : null,
