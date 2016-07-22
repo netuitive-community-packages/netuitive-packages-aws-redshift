@@ -1,8 +1,12 @@
-#netuitive.packages.aws.redshift 1.0.2
+#netuitive.packages.aws.redshift 1.0.3
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 1.0.3
+
+* Bug fix for the multi-metric widgets on the element detail page for Redshift Nodes.
 
 ###Version 1.0.2
 
