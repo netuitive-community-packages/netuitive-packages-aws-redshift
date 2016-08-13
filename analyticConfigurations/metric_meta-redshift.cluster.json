@@ -15,7 +15,8 @@
       "match" : "aws.redshift.cpuutilization",
       "properties" : {
         "tags" : {
-          "unit" : "percent"
+          "unit" : "percent",
+          "utilization" : true
         },
         "validMax" : 100
       }
@@ -23,7 +24,8 @@
       "match" : "aws.redshift.percentagediskspaceused",
       "properties" : {
         "tags" : {
-          "unit" : "percent"
+          "unit" : "percent",
+          "utilization" : true
         },
         "validMax" : 100
       }

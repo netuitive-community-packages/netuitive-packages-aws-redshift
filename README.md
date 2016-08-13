@@ -1,8 +1,12 @@
-#netuitive.packages.aws.redshift 1.0.3
+#netuitive.packages.aws.redshift 1.0.4
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 1.04
+
+* Bug fix: utilization metrics were not tagged as such.
 
 ###Version 1.0.3
 
