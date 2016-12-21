@@ -12,7 +12,7 @@
       "metricMatches" : null
     },
     "metrics" : [ {
-      "match" : "netuitive.aws.rds.totalthroughput",
+      "match" : "netuitive.aws.redshift.totalthroughput",
       "properties" : {
         "expression" : "data['aws.redshift.readthroughput'].actual + data['aws.redshift.writethroughput'].actual",
         "fqn" : "netuitive.aws.redshift.totalthroughput",
