@@ -1,8 +1,12 @@
-#netuitive.packages.aws.redshift 1.0.5
+#netuitive.packages.aws.redshift 1.0.6
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 1.0.6
+
+* Added total throughput metric.
 
 ###Version 1.0.5
 
