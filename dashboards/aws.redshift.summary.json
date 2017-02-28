@@ -9,7 +9,8 @@
       "timeRangeDuration" : "3600",
       "density" : "normal",
       "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+      "wrap" : "true",
+      "gridstackContents": "[{\"id\":\"7803571a-a5b9-48c0-a256-13a5e4a8437d\",\"x\":0,\"y\":0,\"width\":12,\"height\":9},{\"id\":\"c7fdd528-248a-4a9a-8f64-c0d78a1450c3\",\"x\":0,\"y\":9,\"width\":12,\"height\":9}]"
     },
     "tenantId" : null,
     "userId" : null,
