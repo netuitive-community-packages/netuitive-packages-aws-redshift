@@ -1,23 +1,19 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "COMPUTED_METRIC",
-    "id" : null,
-    "packageId" : null,
-    "name" : "AWS Redshift Cluster",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "Redshift Cluster",
-      "elementTags" : null,
-      "metricMatches" : null
-    },
-    "metrics" : [ {
-      "match" : "netuitive.aws.redshift.totalthroughput",
-      "properties" : {
-        "expression" : "data['aws.redshift.readthroughput'].actual + data['aws.redshift.writethroughput'].actual",
-        "fqn" : "netuitive.aws.redshift.totalthroughput",
-        "name" : "Total Throughput"
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "netuitive.aws.redshift.totalthroughput",
+        "properties": {
+          "expression": "data['aws.redshift.readthroughput'].actual + data['aws.redshift.writethroughput'].actual",
+          "fqn": "netuitive.aws.redshift.totalthroughput",
+          "name": "Total Throughput"
+        }
       }
-    }]
+    ],
+    "name": "AWS Redshift Cluster",
+    "scope": {
+      "elementType": "Redshift Cluster"
+    },
+    "type": "COMPUTED_METRIC"
   }
 }

@@ -1,240 +1,144 @@
 {
-  "dashboard" : {
-    "name" : "AWS Redshift Cluster Element Detail Page",
-    "description" : null,
-    "layout" : null,
-    "properties" : {
-      "integrationType" : null,
-      "timeRangeDuration" : "3600",
-      "gridstackContents" : "[{\"id\":\"853229a1-6ce9-41ca-936e-6a0ec54c53e1\",\"x\":0,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"9ea6eae9-e539-49e2-8dff-f3365e3b02d4\",\"x\":6,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"9072aded-fdf0-4823-9a63-5417e15c16ef\",\"x\":8,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"3f4fa71d-b089-4608-af6a-6d0d42aadf99\",\"x\":4,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"d18de5fa-8abe-4931-8cfe-5925896e5115\",\"x\":6,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"721c8007-5973-4093-ad9f-a63d0bbed513\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"48bcdeba-f077-4c3c-b0f1-eb61ff115df9\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"c6895e89-939a-42da-9817-713a325d48b2\",\"x\":0,\"y\":27,\"width\":12,\"height\":10}]",
-      "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+  "dashboard": {
+    "name": "AWS Redshift Cluster Element Detail Page",
+    "private": false,
+    "properties": {
+      "gridstackContents": "[{\"id\":\"853229a1-6ce9-41ca-936e-6a0ec54c53e1\",\"x\":0,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"9ea6eae9-e539-49e2-8dff-f3365e3b02d4\",\"x\":6,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"9072aded-fdf0-4823-9a63-5417e15c16ef\",\"x\":8,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"3f4fa71d-b089-4608-af6a-6d0d42aadf99\",\"x\":4,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"d18de5fa-8abe-4931-8cfe-5925896e5115\",\"x\":6,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"721c8007-5973-4093-ad9f-a63d0bbed513\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"48bcdeba-f077-4c3c-b0f1-eb61ff115df9\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"c6895e89-939a-42da-9817-713a325d48b2\",\"x\":0,\"y\":27,\"width\":12,\"height\":10}]",
+      "refreshIntervalSeconds": "300",
+      "timeRangeDuration": "3600",
+      "wrap": "true"
     },
-    "widgets" : [ {
-      "id" : "853229a1-6ce9-41ca-936e-6a0ec54c53e1",
-      "name" : "Average CPU Utilization Across the Nodes",
-      "description" : null,
-      "widgetType" : "metric-status",
-      "properties" : {
-        "visualization" : "gauge",
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "aws.redshift.cpuutilization",
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
+    "type": "REDSHIFT CLUSTER",
+    "widgets": [
+      {
+        "id": "853229a1-6ce9-41ca-936e-6a0ec54c53e1",
+        "name": "Average CPU Utilization Across the Nodes",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "aws.redshift.cpuutilization",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "visualization": "gauge",
+          "width": "medium"
+        },
+        "widgetType": "metric-status"
+      },
+      {
+        "id": "9ea6eae9-e539-49e2-8dff-f3365e3b02d4",
+        "name": "Database Connections",
+        "properties": {
+          "metricAggs": "[\"AVG\",\"avg\"]",
+          "metricLimit": "10",
+          "metric_fqn": "aws.redshift.databaseconnections",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "metric-time-series"
+      },
+      {
+        "id": "9072aded-fdf0-4823-9a63-5417e15c16ef",
+        "name": "Health",
+        "properties": {
+          "metricAggs": "[\"avg\"]",
+          "metricLimit": "10",
+          "metric_fqn": "aws.redshift.healthstatus",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "small"
+        },
+        "widgetType": "metric-agg"
+      },
+      {
+        "id": "3f4fa71d-b089-4608-af6a-6d0d42aadf99",
+        "name": "Node Map",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-relationships"
+      },
+      {
+        "id": "d18de5fa-8abe-4931-8cfe-5925896e5115",
+        "name": "Tags",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "element-tags"
+      },
+      {
+        "id": "721c8007-5973-4093-ad9f-a63d0bbed513",
+        "name": "Maintenance Mode",
+        "properties": {
+          "metricAggs": "[\"avg\"]",
+          "metricLimit": "10",
+          "metric_fqn": "aws.redshift.maintenancemode",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "small"
+        },
+        "widgetType": "metric-agg"
+      },
+      {
+        "id": "48bcdeba-f077-4c3c-b0f1-eb61ff115df9",
+        "name": "Attributes",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-attributes"
+      },
+      {
+        "id": "c6895e89-939a-42da-9817-713a325d48b2",
+        "name": "Events",
+        "properties": {
+          "elementScopeTypes": "[\"RedshiftCluster\",\"Redshift Cluster\"]",
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "event-ticker"
       }
-    }, {
-      "id" : "9ea6eae9-e539-49e2-8dff-f3365e3b02d4",
-      "name" : "Database Connections",
-      "description" : null,
-      "widgetType" : "metric-time-series",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[\"AVG\",\"avg\"]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "aws.redshift.databaseconnections",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "9072aded-fdf0-4823-9a63-5417e15c16ef",
-      "name" : "Health",
-      "description" : null,
-      "widgetType" : "metric-agg",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[\"avg\"]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "aws.redshift.healthstatus",
-        "metricScopeTags" : "[]",
-        "width" : "small",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "3f4fa71d-b089-4608-af6a-6d0d42aadf99",
-      "name" : "Node Map",
-      "description" : null,
-      "widgetType" : "element-relationships",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "d18de5fa-8abe-4931-8cfe-5925896e5115",
-      "name" : "Tags",
-      "description" : null,
-      "widgetType" : "element-tags",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "721c8007-5973-4093-ad9f-a63d0bbed513",
-      "name" : "Maintenance Mode",
-      "description" : null,
-      "widgetType" : "metric-agg",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[\"avg\"]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "aws.redshift.maintenancemode",
-        "metricScopeTags" : "[]",
-        "width" : "small",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "48bcdeba-f077-4c3c-b0f1-eb61ff115df9",
-      "name" : "Attributes",
-      "description" : null,
-      "widgetType" : "element-attributes",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "c6895e89-939a-42da-9817-713a325d48b2",
-      "name" : "Events",
-      "description" : null,
-      "widgetType" : "event-ticker",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"RedshiftCluster\",\"Redshift Cluster\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    } ],
-    "type" : "REDSHIFT CLUSTER",
-    "private" : false
+    ]
   }
 }
