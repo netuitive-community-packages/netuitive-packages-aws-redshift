@@ -1,72 +1,75 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "METRIC_META",
-    "id" : null,
-    "packageId" : null,
-    "name" : "Redshift Cluster",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "Redshift Cluster",
-      "elementTags" : null,
-      "metricMatches" : null
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "aws.redshift.cpuutilization",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "aws.redshift.percentagediskspaceused",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "aws.redshift.databaseconnections",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "aws.redshift.healthstatus",
+        "properties": {
+          "validMax": 1
+        }
+      },
+      {
+        "match": "aws.redshift.maintenancemode",
+        "properties": {
+          "validMax": 1
+        }
+      },
+      {
+        "match": "aws\\.redshift\\..*throughput",
+        "properties": {
+          "tags": {
+            "unit": "Bps"
+          }
+        }
+      },
+      {
+        "match": "aws\\.redshift\\..*iops",
+        "properties": {
+          "tags": {
+            "unit": "iops"
+          }
+        }
+      },
+      {
+        "match": "aws\\.redshift\\..*latency",
+        "properties": {
+          "tags": {
+            "unit": "seconds"
+          }
+        }
+      }
+    ],
+    "name": "Redshift Cluster",
+    "scope": {
+      "elementType": "Redshift Cluster"
     },
-    "metrics" : [ {
-      "match" : "aws.redshift.cpuutilization",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent",
-          "utilization" : true
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "aws.redshift.percentagediskspaceused",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent",
-          "utilization" : true
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "aws.redshift.databaseconnections",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "aws.redshift.healthstatus",
-      "properties" : {
-        "validMax" : 1
-      }
-    }, {
-      "match" : "aws.redshift.maintenancemode",
-      "properties" : {
-        "validMax" : 1
-      }
-    }, {
-      "match" : "aws\\.redshift\\..*throughput",
-      "properties" : {
-        "tags" : {
-          "unit" : "Bps"
-        }
-      }
-    }, {
-      "match" : "aws\\.redshift\\..*iops",
-      "properties" : {
-        "tags" : {
-          "unit" : "iops"
-        }
-      }
-    }, {
-      "match" : "aws\\.redshift\\..*latency",
-      "properties" : {
-        "tags" : {
-          "unit" : "seconds"
-        }
-      }
-    } ]
+    "type": "METRIC_META"
   }
 }

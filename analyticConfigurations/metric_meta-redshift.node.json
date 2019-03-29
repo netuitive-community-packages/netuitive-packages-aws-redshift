@@ -1,55 +1,55 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "METRIC_META",
-    "id" : null,
-    "packageId" : null,
-    "name" : "Redshift Node",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "Redshift Node",
-      "elementTags" : null,
-      "metricMatches" : null
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "aws.redshift.cpuutilization",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "aws.redshift.percentagediskspaceused",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "aws\\.redshift\\..*throughput",
+        "properties": {
+          "tags": {
+            "unit": "Bps"
+          }
+        }
+      },
+      {
+        "match": "aws\\.redshift\\..*iops",
+        "properties": {
+          "tags": {
+            "unit": "iops"
+          }
+        }
+      },
+      {
+        "match": "aws\\.redshift\\..*latency",
+        "properties": {
+          "tags": {
+            "unit": "seconds"
+          }
+        }
+      }
+    ],
+    "name": "Redshift Node",
+    "scope": {
+      "elementType": "Redshift Node"
     },
-    "metrics" : [ {
-      "match" : "aws.redshift.cpuutilization",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent",
-          "utilization" : true
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "aws.redshift.percentagediskspaceused",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent",
-          "utilization" : true
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "aws\\.redshift\\..*throughput",
-      "properties" : {
-        "tags" : {
-          "unit" : "Bps"
-        }
-      }
-    }, {
-      "match" : "aws\\.redshift\\..*iops",
-      "properties" : {
-        "tags" : {
-          "unit" : "iops"
-        }
-      }
-    }, {
-      "match" : "aws\\.redshift\\..*latency",
-      "properties" : {
-        "tags" : {
-          "unit" : "seconds"
-        }
-      }
-    } ]
+    "type": "METRIC_META"
   }
 }
